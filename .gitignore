@@ -1,5 +1,5 @@
 /node_modules
-/public_html
+/public_html/
 /storage/*.key
 /storage
 /vendor
