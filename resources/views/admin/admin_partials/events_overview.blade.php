@@ -8,7 +8,7 @@ use App\Event;
 @section('content_desktop_render_admin')
 	<br>
 	<div class="container">
-	    <div class="row " style="padding: 0 !important; margin: 0 !important">
+	    <div class="row" style="padding: 0 !important; margin: 0 !important">
 	      <div class="col-lg-2 col-md-2">
 	        <a href="/admin"  style="color:#5B6265; cursor: pointer">
 	          <div class="card card-default" >
@@ -17,6 +17,9 @@ use App\Event;
 	              </div>
 	          </div>
 	        </a>
+	      </div>
+	      <div class="col-lg-2 col-md-2 offset-8">
+	        
 	      </div>
 	    </div>
 	</div>
@@ -31,6 +34,16 @@ use App\Event;
 		
 		@if(App\Event::count())
 			<div class="row">
+				<div class="col-4">
+					<a href="{{route('events_add_admin')}}" style="text-decoration: none">
+						<div class="card card-default" style="height: 100%; background-color: transparent; border-style: dashed; border-color: grey">
+							<center style="margin-top: 30px">
+								<i class="fa fa-plus fa-3x" aria-hidden="true" style="border: 1px dashed; border-radius: 100%; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px"></i>
+								<p style="font-family: cdreams; font-weight: bold">Add Event</p>
+							</center>
+						</div>	
+					</a>
+				</div>
 				@foreach(App\Event::orderBy('id','desc')->get() as $event) 
 				<div class="col-lg-4 col-md-4" >
 						<div class="card card-default " style="height:150px;">
@@ -52,7 +65,7 @@ use App\Event;
 									<div class="col-lg-8 ">
 										<div class=" //animated\\ fadeInDown" style="border-bottom:1px solid ;border-color: black; font-size: 20px; margin-bottom: 0px; padding-bottom: 0px; margin-top: 16px" >{{$event->title}}</div><br>
 										<a data-toggle="collapse" data-target="#{{$event->id}}" class="btn btn btn-primary btn-sm pull-right //animated\\ fadeInUp text-light">View</a>
-										<a data-toggle="modal" data-target="#{{$event->id}}_edit" class="btn btn btn-success btn-sm pull-right //animated\\ fadeInUp text-light mr-1">Edit</a>
+										<a data-toggle="modal" data-target="#{{-- {{$event->id}} --}}_edit" class="btn btn btn-success btn-sm pull-right //animated\\ fadeInUp text-light mr-1" style="opacity: 0.5; cursor: not-allowed;">Edit</a>
 									</div>
 								</div>
 							</div>
@@ -60,6 +73,8 @@ use App\Event;
 					</div>	 
 					@include('admin.admin_partials.edit_events_modals')
 				@endforeach
+
+				
 			
 			<div id="collapse_group_events">
 				@foreach(App\Event::get() as $event)
@@ -132,10 +147,19 @@ use App\Event;
 			</div>
 		</div>
 		@else
-		<br>
-			<div class="col-12">
-		        <h3 style="color:grey; text-align: center">No events have been added for {{Config('app.next_festival_year')}} </h3>
+		<div class="row">
+			<div class="col-4">
+				<a href="" style="text-decoration: none">
+					<div class="card card-default" style="height: 150px; background-color: transparent; border-style: dashed; border-color: grey">
+						<center style="margin-top: 30px">
+							<i class="fa fa-plus fa-3x" aria-hidden="true" style="border: 1px dashed; border-radius: 100%; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 10px"></i>
+							<p style="font-family: cdreams; font-weight: bold">Add Event</p>
+						</center>
+					</div>	
+				</a>
 			</div>
+		</div>
+
 		@endif
 	</div>
 @endsection

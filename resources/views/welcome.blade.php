@@ -301,6 +301,7 @@ $month = Config::get('app.month');;
 
     @endif
     <div class="container mt-4 animated fadeIn">
+
         <div class="row">
             <div class="col-6">
                 <div class="card card-default  text-dark">

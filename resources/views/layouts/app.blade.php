@@ -56,6 +56,9 @@
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/sweetalert.min.js')}}"></script>
     <style type="text/css">
+        .datepicker{
+          z-index: 1100 !important;
+        }
         .nav-link{
             font-family: Montserrat;
         }
@@ -478,8 +481,8 @@ $month = Config::get('app.month');;
             </div>
             <div class="d-xl-none d-lg-none " >
             <a href="javascript:" class="return-to-top"><i class="fa fa-caret-up" ></i></a>
-                <!--<a href="#" data-toggle="modal" data-target="#contact-modal"  class="contact-us"><i class="fa fa-envelope"></i></a>
-                <div id="contact-modal" class="modal fade" role="dialog" style="background-color: rgba(0,0,0,0.96);">
+              <a data-toggle="modal" data-target="#contact-modal-mobile"  class="contact-us"><i class="fa fa-envelope"></i></a>
+                <div id="contact-modal-mobile" class="modal fade" role="dialog" style="background-color: rgba(0,0,0,0.96);">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -509,7 +512,7 @@ $month = Config::get('app.month');;
 
                     </div>
 
-                </div>-->
+                </div>
             </div>
         @endif
     </main>

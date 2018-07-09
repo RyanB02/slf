@@ -19,7 +19,7 @@
         }
     ?>
 
- 
+    
     <meta charset="utf-8">
     <meta name="google-site-verification" content="3tKjaUjBWQDa2wonb5IM5fS0nvKgDdbU7cfAcJH-Qu8" />
     <meta property="og:image" content="{{asset('images/cropped-favicon-1.png')}}">
@@ -44,6 +44,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/daterangepicker.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+    <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/sweetalert.min.js')}}"></script>
     <style type="text/css">
@@ -401,7 +402,7 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
-{!! Analytics::render() !!}
+
 </head>
 
 <?php
@@ -457,36 +458,36 @@ $month = Config::get('app.month');;
                 @include('layouts.partials.nav')
                 @yield('content_mobile_render')
             </div>
-            <div class="d-xl-none d-lg-none " >
+             <div class="d-xl-none d-lg-none " >
                 <a href="javascript:" class="return-to-top"><i class="fa fa-caret-up" ></i></a>
-                <a href="#" data-toggle="modal" data-target="#contact-modal"  class="contact-us"><i class="fa fa-envelope"></i></a>
-                <div id="contact-modal" class="modal fade" role="dialog" style="background-color: rgba(0,0,0,0.96);">
+                <a href="#" data-toggle="modal" data-target="#contact-modal-mobile"  class="contact-us"><i class="fa fa-envelope"></i></a>
+                <div id="contact-modal-mobile" class="modal fade" role="dialog" style="background-color: rgba(0,0,0,0.96);">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <form class="form-vertical ff" role="form" method="post" action="/contact" id="">
+                                <form class="form-vertical ff1" role="form" method="post" action="/" id="">
                                         {{ csrf_field() }}                            
                                         <div class="form-group">
                                             <label for="attendee_name">Please Input Your Name*</label>
-                                            <input class="form-control" name="name" type="name" id="name"  placeholder="John Doe" value="{!! old('name') !!}"  >
+                                            <input class="form-control name" name="name" type="name" id="name"  placeholder="John Doe" value="{!! old('name') !!}"  >
                                         </div>
                                         <div class="form-group">
                                             <label for="attendee_name">Please Input Your Email*</label>
-                                            <input  class="form-control" type="email" name="email" id="email" placeholder="johndoe02@doe.com" value="{!! old('email') !!}" >
+                                            <input  class="form-control email" type="email" name="email" id="email" placeholder="johndoe02@doe.com" value="{!! old('email') !!}" >
 
                                         </div>
                                         {{-- <div class="form-group">
                                             <label for="attendee_name">Mobile Number (optional) | Please follow format: 07700 900796 (UK only/no need to use +44)</label>
                                             <input  class="form-control" type="text" name="mobile" id="mobile" placeholder="07700 900796" value="{!! old('mobile') !!}" data-format="(ddd) ddd-dddd">
 
-                                        </div> --}}
+                                        </div>  --}}
                                         <div class="form-group">
                                         <label for="radio" style="width:100%">Your Message*<div class="count pull-right">0/2000</div></label>
-                                            <textarea class="form-control textarea_auto_resize message" id="message"  name="message" placeholder="Your message...(please try to keep below 2000 characters)" style="resize: none; min-height: 50px !important; ">{!! old('message') !!}</textarea>
+                                            <textarea class="form-control textarea_auto_resize message msg" id="message"  name="message" placeholder="Your message...(please try to keep below 2000 characters)" style="resize: none; min-height: 50px !important; ">{!! old('message') !!}</textarea>
                                         </div>
-                                        {{-- <div class="form-group">
-                                            <div class="g-recaptcha" data-sitekey="6LcH_2AUAAAAAN6zztFOtzRSxm9anSa3G0s67Lsk"></div>
-                                        </div> --}}
+                                        <div class="form-group">
+                                            <div class="g-recaptcha g-recaptcha-mobile" data-sitekey="6LcH_2AUAAAAAN6zztFOtzRSxm9anSa3G0s67Lsk"></div>
+                                        </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary pull-right">Submit</button>
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -499,35 +500,35 @@ $month = Config::get('app.month');;
                     </div>
 
                 </div>
-            </div>
+            </div>  
 
             <div class="d-none d-lg-block " >
                 <div id="contact-modal-desktop" class="modal fade" role="dialog" style="background-color: rgba(0,0,0,0.96);">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <form class="form-vertical ff" role="form" method="post" action="/" id="">
+                                <form class="form-vertical ff2" role="form" method="post" action="/" id="">
                                         {{ csrf_field() }}                            
                                         <div class="form-group">
                                             <label for="attendee_name">Please Input Your Name*</label>
-                                            <input class="form-control name" name="name" type="name" id="name_desktop" autocomplete='name'  placeholder="John Doe" value="{!! old('name') !!}"  >
+                                            <input class="form-control name_desktop_verif" name="name" type="name" id="name_desktop" autocomplete='name'  placeholder="John Doe" value="{!! old('name') !!}"  >
                                         </div>
                                         <div class="form-group">
                                             <label for="attendee_name">Please Input Your Email*</label>
-                                            <input  class="form-control email" type="email" name="email" id="email_desktop" placeholder="johndoe02@doe.com" autocomplete='email' value="{!! old('email') !!}" >
+                                            <input  class="form-control email_desktop_verif" type="email" name="email" id="email_desktop" placeholder="johndoe02@doe.com" autocomplete='email' value="{!! old('email') !!}" >
 
                                         </div>
-                                        {{-- <div class="form-group">
+                                        {{--<div class="form-group">
                                             <label for="attendee_name">Mobile Number (optional) | Please follow format: 07700 900796 (UK only/no need to use +44)</label>
                                             <input  class="form-control" type="text" name="mobile" id="mobile_desktop" placeholder="07700 900796" value="{!! old('mobile') !!}" data-format="(ddd) ddd-dddd">
 
-                                        </div> --}}
+                                        </div>  --}}
                                         <div class="form-group">
                                         <label for="radio" style="width:100%">Your Message*<div class="count pull-right" id="count"></div></label>
-                                            <textarea class="form-control textarea_auto_resize message msg" id="message_desktop"  name="message" placeholder="Your message...(please try to keep below 2000 characters)" style="resize: none; min-height: 50px !important; ">{!! old('message') !!}</textarea>
+                                            <textarea class="form-control textarea_auto_resize message msg_desktop_verif" id="message_desktop"  name="message" placeholder="Your message...(please try to keep below 2000 characters)" style="resize: none; min-height: 50px !important; ">{!! old('message') !!}</textarea>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="g-recaptcha" data-sitekey="6LcH_2AUAAAAAN6zztFOtzRSxm9anSa3G0s67Lsk"></div>
+                                         <div class="form-group">
+                                            <div class="g-recaptcha g-recaptcha-desktop" data-sitekey="6LcH_2AUAAAAAN6zztFOtzRSxm9anSa3G0s67Lsk"></div>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary pull-right" id="Submit_btn">Submit</button>
@@ -540,7 +541,7 @@ $month = Config::get('app.month');;
                         <script type="text/javascript">
                             var nameval = document.getElementById('name_desktop');
                             var emailval = document.getElementById('email_desktop');
-                            var mobileval = document.getElementById('mobile_desktop');
+                            // var mobileval = document.getElementById('mobile_desktop');
                             var messageval = document.getElementById('message_desktop');                            
                             nameval.onkeyup = nameval.onkeypress = function(){
                                 document.getElementById('name_prev2').innerHTML = this.value;
@@ -548,9 +549,9 @@ $month = Config::get('app.month');;
                             emailval.onkeyup = emailval.onkeypress = function(){
                                 document.getElementById('email_prev').innerHTML = this.value;
                             }
-                            mobileval.onkeyup = mobileval.onkeypress = function(){
-                                document.getElementById('mobile_prev').innerHTML = this.value;
-                            }
+                            // mobileval.onkeyup = mobileval.onkeypress = function(){
+                            //     document.getElementById('mobile_prev').innerHTML = this.value;
+                            // }
                             messageval.onkeyup = messageval.onkeypress = function(){
                                 document.getElementById('message_prev').innerHTML = this.value;
                             }
@@ -572,11 +573,11 @@ $month = Config::get('app.month');;
                                             <h4 id="email_prev" style="font-family: Montserrat; color:grey; overflow: hidden"></h4>
 
                                         </div>
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label for="attendee_name">Mobile:</label><br>
                                             <h4 id="mobile_prev" style="font-family: Montserrat; color:grey; overflow: hidden"></h4>
 
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                         <label for="radio" style="width:100%">Message:<div class="count pull-right">0/2000</div></label><br>
                                            <blockquote id="message_prev" style="font-family: Montserrat; color:grey; word-wrap: break-word;"></blockquote>
@@ -603,18 +604,77 @@ $month = Config::get('app.month');;
     </div>-->  
     <script src="{{asset('js/moment.min.js')}}"></script>
     <script src="{{asset('js/daterangepicker.js')}}"></script>
+    
     <script src="{{asset('js/scroll.js')}}"></script>
     <script>
         $(function(){
-            $('.ff').submit(function(event){
+            $('.ff1').submit(function(event){
                 var verif_inc;
                 var verif_name;
                 var verif_email;
                 var verif_msg;
-                var verified = grecaptcha.getResponse();
+                var verified = document.getElementsByClassName('g-recaptcha-mobile')[0].value;
                 var name = document.getElementsByClassName('name')[0].value;
                 var email = document.getElementsByClassName('email')[0].value;
                 var msg = document.getElementsByClassName('msg')[0].value;
+                if(verified.length === 0){
+                    verif_inc = 1;   
+                    verif_inc_dat = "Recaptcha is required \n";             
+                }
+                if(verified.length > 0){
+                    verif_inc = 0;   
+                    verif_inc_dat = "";  
+                }
+                if(name.length === 0){
+                    verif_name = 1;
+                    verif_name_dat = "Name is required \n";
+                }
+                if(name.length > 0){
+                    verif_name = 0;   
+                    verif_name_dat = "";  
+                }
+                if(email.length === 0){
+                    verif_email = 1;
+                    verif_email_dat = "Email is required \n";
+                }
+                if(email.length > 0){
+                    verif_email = 0;   
+                    verif_email_dat = "";  
+                }
+                if (msg.length === 0) {
+                    verif_msg = 1;
+                    verif_msg_dat = "Message is required \n"
+                }
+                if(msg.length > 0){
+                    verif_msg = 0;   
+                    verif_msg_dat = "";  
+                }
+                if(verif_inc === 1 || verif_name === 1 || verif_email === 1 || verif_msg === 1){
+                    event.preventDefault();
+                    swal({
+                      title: "Warning",
+                      text: verif_name_dat + verif_email_dat + verif_msg_dat + verif_inc_dat,
+                      icon: "error",
+                      closeOnClickOutside: true,
+                      closeOnEsc: true,
+                      button:"Okay",
+                    });
+                    
+                }
+            })
+        });
+    </script>
+    <script>
+        $(function(){
+            $('.ff2').submit(function(event){
+                var verif_inc;
+                var verif_name;
+                var verif_email;
+                var verif_msg;
+                var verified = document.getElementsByClassName('g-recaptcha-desktop')[0].value;
+                var name = document.getElementsByClassName('name_desktop_verif')[0].value;
+                var email = document.getElementsByClassName('email_desktop_verif')[0].value;
+                var msg = document.getElementsByClassName('msg_desktop_verif')[0].value;
                 if(verified.length === 0){
                     verif_inc = 1;   
                     verif_inc_dat = "Recaptcha is required \n";             
@@ -680,10 +740,12 @@ $month = Config::get('app.month');;
             }  
         });
     </script> --}}
-    <script>
-        var str = " Admin View - ";
-        document.getElementById("repeat_admin_view").innerHTML = str.repeat(150);
-    </script>
+    @if(Auth::user() && Auth::user()->admin  == 1)
+        <script>
+            var str = " Admin View - ";
+            document.getElementById("repeat_admin_view").innerHTML = str.repeat(150);
+        </script>
+    @endif
     <script type="text/javascript">
         $(function(){
           $('.navbar-toggle_spec').click(function(){

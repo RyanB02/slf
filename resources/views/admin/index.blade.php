@@ -69,6 +69,7 @@ use App\tmpnote;
         <a  href="#" style="text-decoration: none; color: inherit" id="about_circ"> 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;" >
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-dark" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500;">Under dev</div>
                     <div class="card-body">
                         <center>
                             <i class="fa fa-calendar fa-5x" aria-hidden="true" ></i>
@@ -81,7 +82,8 @@ use App\tmpnote;
         <a  href="{{route('edit_guests')}}" style="text-decoration: none; color: inherit" id="about_circ"> 
             <div class="col-lg-2 col-md-2">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-primary" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">UPDATED!</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-address-book fa-5x" aria-hidden="true" ></i>
                             <h5 style="padding-top: 5px">Edit Guests {{config('app.next_festival_year')}}</h5>
@@ -93,7 +95,8 @@ use App\tmpnote;
         <a  href="{{route('admin_add_featuring')}}" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-warning" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">Functional</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-star fa-5x" aria-hidden="true" ></i>
                             <h5 style="padding-top: 5px">Edit Featuring</h5>
@@ -121,6 +124,7 @@ use App\tmpnote;
         <a  href="{{route('admin_add_sponsor')}}" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" >
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-warning" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">Functional</div>
                     <div class="card-body">
                         <center>
                             <i class="fa fa-money fa-5x" aria-hidden="true"></i>
@@ -137,7 +141,8 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;" >
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">User Options</h5>
@@ -149,7 +154,8 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-clock-o fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">Timetable</h5>
@@ -161,7 +167,8 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-clipboard fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">Event Management (WIP)</h5>
@@ -173,7 +180,8 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-wrench fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">WIP</h5>
@@ -185,6 +193,7 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
                     <div class="card-body">
                         <center>
                             <i class="fa fa-cog fa-5x" aria-hidden="true"></i>
@@ -198,14 +207,15 @@ use App\tmpnote;
     </div>
 <div class="d-none d-lg-block d-xl-none">
     <div class="row" >
-        <a  href="{{route('admin_edit_about')}}" style="text-decoration: none; color: inherit" id="about_circ"> 
-
-            <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+      <a  href="{{route('edit_pages_index')}}" style="text-decoration: none; color: inherit" id="about_circ"> 
+            <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1" style="">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-success" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">NEW!</div>
                     <center>
                         <br>
-                        <i class="fa fa-info fa-5x" aria-hidden="true"></i>
-                        <h5 style="padding-top: 5px">Edit About Us</h5> 
+
+                        <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
+                        <h5 style="padding-top: 5px">Edit Pages</h5> 
                     </center>
                 </div>
             </div>
@@ -213,6 +223,7 @@ use App\tmpnote;
         <a  href="#" style="text-decoration: none; color: inherit" id="about_circ"> 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;" >
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-dark" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500;">Under dev</div>
                     <div class="card-body">
                         <center>
                             <i class="fa fa-calendar fa-5x" aria-hidden="true" ></i>
@@ -223,9 +234,10 @@ use App\tmpnote;
             </div>
         </a>
         <a  href="{{route('edit_guests')}}" style="text-decoration: none; color: inherit" id="about_circ"> 
-            <div class="col-lg-2 col-md-2" >
+            <div class="col-lg-2 col-md-2">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-primary" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">UPDATED!</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-address-book fa-5x" aria-hidden="true" ></i>
                             <h5 style="padding-top: 5px">Edit Guests {{config('app.next_festival_year')}}</h5>
@@ -237,7 +249,8 @@ use App\tmpnote;
         <a  href="{{route('admin_add_featuring')}}" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-warning" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">Functional</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-star fa-5x" aria-hidden="true" ></i>
                             <h5 style="padding-top: 5px">Edit Featuring</h5>
@@ -263,8 +276,9 @@ use App\tmpnote;
             };
         ?>
         <a  href="{{route('admin_add_sponsor')}}" id="about_circ" style="text-decoration: none; color: inherit" > 
-            <div class="col-lg-2 col-md-2">
+            <div class="col-lg-2 col-md-2" >
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-warning" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">Functional</div>
                     <div class="card-body">
                         <center>
                             <i class="fa fa-money fa-5x" aria-hidden="true"></i>
@@ -275,13 +289,13 @@ use App\tmpnote;
             </div>
         </a>
       </div>
-      
       <br>
       <div class="row">
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;" >
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">User Options</h5>
@@ -290,10 +304,11 @@ use App\tmpnote;
                 </div>
             </div>
         </a>
-        <a  href="{{route('schedule')}}" id="about_circ" style="text-decoration: none; color: inherit" > 
-            <div class="col-lg-2 col-md-2">
+        <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
+            <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-clock-o fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">Timetable</h5>
@@ -302,10 +317,11 @@ use App\tmpnote;
                 </div>
             </div>
         </a>
-        <a  href="{{route('event_management_index')}}" id="about_circ" style="text-decoration: none; color: inherit" > 
-            <div class="col-lg-2 col-md-2" >
+        <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
+            <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-clipboard fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">Event Management (WIP)</h5>
@@ -317,7 +333,8 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
-                    <div class="card-body">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
+                    <div class="card-body">                        
                         <center>
                             <i class="fa fa-wrench fa-5x" aria-hidden="true"></i>
                             <h5 style="padding-top: 5px">WIP</h5>
@@ -329,6 +346,7 @@ use App\tmpnote;
         <a  href="#" id="about_circ" style="text-decoration: none; color: inherit" > 
             <div class="col-lg-2 col-md-2" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="card card-default" style=" height:160px !important; width:160px !important; color:#5B6265">
+                    <div class="badge badge-danger" style=" position: absolute; font-size:20px; width:100%; border-top-right-radius:3px; border-top-left-radius:3px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;font-weight:500">WIP</div>
                     <div class="card-body">
                         <center>
                             <i class="fa fa-cog fa-5x" aria-hidden="true"></i>
@@ -344,6 +362,12 @@ use App\tmpnote;
     <br>
     <div class="container">
       <div class="row col-12">
+        <div class="col-12">
+            <div class="alert alert-warning">
+                Panels with the 'functional' tag on them do work but they need to be refreshed/re-thought out because they aren't the most efficient
+            </div>
+        </div>
+        
         <div class="col-6">
           <div class="card card-default">
             <div class="card-header">Contact Form Submissions</div>

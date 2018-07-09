@@ -38,7 +38,7 @@
 		</div>
 		<br>
 		<div class="container mt-2">
-			<div class="row col-12">
+			<div class="row ">
 				
 					<div class="col-lg-4 col-md-4" >
 						<div class="card card-default " style="height:150px;">
@@ -145,23 +145,19 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body">
-						<form class="form-vertical" role="form" method="post" action="{{URL::to('admin/add_guest')}}" enctype="multipart/form-data">
+						<form class="form-vertical" role="form" method="post" action="{{URL::to('admin/add_event')}}" enctype="multipart/form-data">
 							<div class="form-group">
-								<label for="writer_name">Guest Name <a style="color:red; font-size: 20px; font-family: comic-sans; text-decoration: none ">*</a></label>
-								<input type="text" id="" name="name" class="form-control" placeholder="Roald Dahl">
+								<label for="writer_name">Event Title <a style="color:red; font-size: 20px; font-family: comic-sans; text-decoration: none ">*</a></label>
+								<input type="text" id="" name="name" class="form-control" placeholder="Day 1">
 							</div>
 							<div class="form-group">
-								<label for="desc">Please Input A Description Of The Guest <a style="color:red; font-size: 20px; font-family: comic-sans; text-decoration: none">*</a></label>
-								<textarea class="form-control textarea_auto_resize"  name="desc" placeholder="Stephen King was born in portland on the 21st of September 1947. His books are classed as horror, fantasy and science-fiction." style="resize: none;min-height: 50px !important; "></textarea>
+								<label for="desc">Please Input A Description Of The Event <a style="color:red; font-size: 20px; font-family: comic-sans; text-decoration: none">*</a></label>
+								<textarea class="form-control textarea_auto_resize"  name="desc" placeholder="It's.....day one!" style="resize: none;min-height: 50px !important; "></textarea>
 							</div>
 							<div class="form-group">
-								<label for="desc">More info (such as website or facebook, <a style="color:red; text-decoration: none">if adding website be sure to always use www</a></label>
-								<textarea class="form-control textarea_auto_resize" name="more" placeholder="To find out more about Dr Seuss, please go to www.seussville.com/" style="resize: none; min-height: 50px !important;"></textarea>
-							</div>
-							<div class="form-group">
-								<label for="attendee_name" >Select An Image Of The Guest To Upload <a style="color:red; font-size: 20px; font-family: comic-sans; text-decoration: none">*</a> </label>
-								<input type="file" name="image" id="image">
-							</div>
+								<label for="date">Please Select A Date <a style="color:red; font-size: 20px; font-family: comic-sans; text-decoration: none">*</a></label>
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Select value" readonly style="cursor: pointer">
+                            </div>
 							<div class="form-group">
 				                <button type="submit" class="btn btn-primary pull-right">Add</button>
 				            </div>
@@ -174,6 +170,18 @@
 
         </div>
 	</div>
+	<script type="text/javascript">
+		$(function () {
+		    //date time picker
+		    $('#date').daterangepicker({
+		    	parentEl: "#adding-modal .modal-body",
+		        singleDatePicker: true,
+		        locale: {
+		            format: 'DD-MM-YYYY'
+		        }
+		    });
+		});
+	</script>
 @endsection
 @section('content_mobile_render_admin')
 @endsection
